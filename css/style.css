@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+}
+/*Header Css*/
+.bg-color{
+    background-color: #f6f9f9;
+}
+nav{
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    color: #2d3950;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-left: 12px!important;
+    padding-right: 12px !important;
+}
+/*Mobile Toogle Navbar*/
+.navbar-toggler{
+    border: 1px solid #15a4fa;
+    padding: 0 7px;
+    transition-duration: 0.4s;
+}
+.navbar-toggler:hover{
+    background-color: #2d3950;
+    border: 1px solid #2d3950;
+}
+.navbar-toggler span{
+    display: block;
+    width: 36px;
+    height: 4px;
+    background-color: #15a4fa;
+    margin: 6px 0;
+    transition-duration: 0.4s;
+}
+.navbar-toggler:hover span{
+    background-color: #fff!important;
+}
+
+/*Banner Section*/
+.banner-section{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-section .row{
+    min-height: 800px !important;
+}
+.banner-section h1{
+    color: #fff;
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.banner-section p{
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.banner-section span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #15a4fa;
+}
+.banner-section button{
+    border: 1px solid #15a4fa;
+    font-size: 18px;
+    padding: 14px 33px;
+    background-color: transparent;
+    color: #fff;
+}
+.banner-section button:hover{
+    background-color:#15a4fa;
+    color: #fff;
+}
+.banner-section a {
+    color: #fff;
+    display: block;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    animation-name: bannerMove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+@keyframes bannerMove{
+    0%{
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    }
+    100%{
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    }
+}
+
+/*About and Showcase Global Css*/
+h1{
+    font-size: 40px;
+    color: #2d3950;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+p{
+    color: #999999;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*About Section*/
+.about-section{
+    text-align: center;
+    padding: 80px 0 90px;
+}
+
+/*Service Section*/
+.service_section{
+    text-align: center;
+    padding: 65px 0;
+}
+.service{
+    
+}
+.service span{
+    font-size: 50px;
+    color: #fff;
+    background: #48baff;
+    background: -moz-linear-gradient(left, #48baff 50%, #5fc3ff 50%, #5fc3ff 50%);
+    background: -webkit-linear-gradient(left, #48baff 50%,#5fc3ff 50%,#5fc3ff 50%);
+    background: linear-gradient(to right, #48baff 50%,#5fc3ff 50%,#5fc3ff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 );
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    line-height: 100px;
+    margin-bottom: 30px;
+
+}
+.service span i{
+}
+.service h2{
+    font-size: 22px;
+    color: #2d3950;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.service p{
+    font-size: 15px;
+    max-width: 300px;
+    margin: auto;
+}
+
+
+/*Showcase Section*/
+.showcase_section{
+    text-align: center;
+    padding: 80px 0 110px;
+}
+
+.showcase{
+    position: relative;
+    margin-top: 30px;
+}
+.showcase img{
+    width: 100%;
+}
+.showcase ul{
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    transform: translate(50%, 40%);
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+}
+.showcase ul:hover{
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    opacity: 1; 
+}
+
+.showcase ul li{
+    padding: 10px;
+}
+.showcase ul li a{
+    display: block;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.showcase ul li a:hover{}
+
+/*.overlay {
+    position: absolute;
+    background: #15a4fac4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}*/
+
+.showcase::before{
+    content: "";
+    position: absolute;
+    background: #15a4fac4;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.4s;
+}
+.showcase:hover::before{
+    height: 100%;
+}
+
+/*Contact Section*/
+.contact-section{
+    background-image: url(../images/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 75px 0 110px;
+}
+.contact-section::before{
+    content: "";
+    background-color: #2d3950;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    
+}
+.contact-section h1{
+    color: #fff;
+    font-size: 41px;
+    margin-bottom: 10px;
+}
+.contact-section p{
+    color: #999999;
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 30px 16px;
+    color: #999999;
+    background-color: #fff0;
+    border: 1px solid #999999;
+}
+.contact-section label{
+    color: #999999;
+    padding-left: 10px;
+}
+form .btn{
+    border: 1px solid #15a4fa;
+    font-size: 18px;
+    padding: 8px 49px;
+    background-color: transparent;
+    color: #fff;
+}
+form .btn:hover{
+    background-color: #15a4fa;
+    color: #ffffff;
+}
+
+/*Footer Section*/
+.footer-section{
+    background-color:#f6f9f9;
+    padding: 21px 0;
+}
+.footer-section p{
+    color: #999999;
+    font-size: 15px;
+    margin: 0px;
+}
+.footer-section ul{}
+.footer-section ul li{
+    padding-left: 5px;
+}
+.footer-section ul li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #15a4fa;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    border: 1px solid #15a4fa;
+    transition-duration: 0.4s;
+}
+.footer-section ul li a:hover{
+    background-color: transparent;
+    color:#15a4fa;
+}
